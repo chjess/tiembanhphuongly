@@ -401,24 +401,25 @@ if (logoLink) {
     nav.classList.remove("open");
     menuToggle.classList.remove("open");
     window.history.replaceState(null, "", "#home");
-    document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
 
 nav.querySelectorAll(".nav-dropdown > .dropdown-toggle").forEach((toggle) => {
   toggle.addEventListener("click", (event) => {
-    if (window.innerWidth <= 980 || nav.classList.contains("open")) {
+    const isMobile = window.matchMedia("(max-width: 980px)").matches || nav.classList.contains("open");
+    if (isMobile) {
       event.preventDefault();
       const dropdown = toggle.closest(".nav-dropdown");
+      const submenu = dropdown.querySelector(".submenu");
       const isOpen = dropdown.classList.toggle("open");
+      submenu?.classList.toggle("open", isOpen);
       document.querySelectorAll(".nav-dropdown").forEach((other) => {
         if (other !== dropdown) {
           other.classList.remove("open");
+          other.querySelector(".submenu")?.classList.remove("open");
         }
       });
-      if (!isOpen) {
-        dropdown.querySelector(".submenu")?.classList.remove("open");
-      }
     }
   });
 });
