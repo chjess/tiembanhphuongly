@@ -384,6 +384,43 @@ checkoutBtn.addEventListener("click", () => {
 menuToggle.addEventListener("click", () => {
   nav.classList.toggle("open");
   menuToggle.classList.toggle("open");
+  if (!nav.classList.contains("open")) {
+    document.querySelectorAll(".nav-dropdown.open").forEach((dropdown) => {
+      dropdown.classList.remove("open");
+      const submenu = dropdown.querySelector(".submenu");
+      if (submenu) submenu.classList.remove("open");
+    });
+  }
+});
+
+const logoLink = document.querySelector(".logo");
+if (logoLink) {
+  logoLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    resetPageView();
+    nav.classList.remove("open");
+    menuToggle.classList.remove("open");
+    window.history.replaceState(null, "", "#home");
+    document.getElementById("home")?.scrollIntoView({ behavior: "smooth" });
+  });
+}
+
+nav.querySelectorAll(".nav-dropdown > .dropdown-toggle").forEach((toggle) => {
+  toggle.addEventListener("click", (event) => {
+    if (window.innerWidth <= 980 || nav.classList.contains("open")) {
+      event.preventDefault();
+      const dropdown = toggle.closest(".nav-dropdown");
+      const isOpen = dropdown.classList.toggle("open");
+      document.querySelectorAll(".nav-dropdown").forEach((other) => {
+        if (other !== dropdown) {
+          other.classList.remove("open");
+        }
+      });
+      if (!isOpen) {
+        dropdown.querySelector(".submenu")?.classList.remove("open");
+      }
+    }
+  });
 });
 
 function resetPageView() {
@@ -401,6 +438,7 @@ function showPageView(pageId) {
 }
 
 nav.querySelectorAll("a").forEach((a) => {
+  if (a.classList.contains("dropdown-toggle")) return;
   a.addEventListener("click", (e) => {
     const page = a.dataset.page;
     if (page) {
