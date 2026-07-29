@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiệm Bánh Phương Lý (@lybi1993) | Bánh kem handmade</title>
+  <meta name="description" content="Tiệm Bánh Phương Lý — @lybi1993 trên TikTok. Bánh kem handmade, bánh sinh nhật custom, cookies & quà ngọt. Đặt online, giao tận nơi." />
+  <meta property="og:title" content="Tiệm Bánh Phương Lý | @lybi1993" />
+  <meta property="og:description" content="Bánh handmade từ bếp Phương Lý — xem & order qua TikTok @lybi1993" />
+  <meta property="og:url" content="https://www.tiktok.com/@lybi1993" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Floating crumbs decoration -->
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <span class="logo-mark">PL</span>
+        <span class="logo-text">
+          <strong class="brand-name">Phương Lý</strong>
+          <small>Bakery</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#home" data-page="home">Trang chủ</a>
+        <div class="nav-item nav-dropdown">
+          <a href="#menu" class="dropdown-toggle" data-page="menu">Menu <span aria-hidden="true">▾</span></a>
+          <div class="submenu">
+            <a href="#best-seller" data-page="best-seller">Best Seller</a>
+            <a href="#test-2" data-page="test-2">test 2</a>
+            <a href="#test-3" data-page="test-3">test 3</a>
+            <a href="#test-4" data-page="test-4">test 4</a>
+            <a href="#test-5" data-page="test-5">test 5</a>
+          </div>
+        </div>
+        <a href="#story">Câu chuyện</a>
+        <a href="#tiktok">TikTok</a>
+        <div class="nav-item nav-dropdown">
+          <a href="#gallery" class="dropdown-toggle">Gallery <span aria-hidden="true">▾</span></a>
+          <div class="submenu">
+            <a href="#gallery-strawberry-dream" data-page="gallery-strawberry-dream">Strawberry Dream</a>
+            <a href="#gallery-chocolate-cloud" data-page="gallery-chocolate-cloud">Chocolate Cloud</a>
+            <a href="#gallery-lemon-soft" data-page="gallery-lemon-soft">Lemon Soft</a>
+            <a href="#gallery-sakura-bloom" data-page="gallery-sakura-bloom">Sakura Bloom</a>
+            <a href="#gallery-cookie-box" data-page="gallery-cookie-box">Cookie Box</a>
+            <a href="#gallery-gift-set" data-page="gallery-gift-set">Gift Set</a>
+          </div>
+        </div>
+        <a href="#order">Đặt bánh</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="tiktok-pill" href="https://www.tiktok.com/@lybi1993" target="_blank" rel="noopener noreferrer" title="TikTok @lybi1993">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.88-2.88 2.89 2.89 0 0 1 2.88-2.88c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.3a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.16 8.16 0 0 0 4.76 1.52V6.84a4.84 4.84 0 0 1-1-.15z"/>
+          </svg>
+          @lybi1993
+        </a>
+        <button class="cart-btn" id="cartBtn" aria-label="Giỏ hàng">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 6h15l-1.5 9h-12z" />
+            <path d="M6 6L5 3H2" />
+            <circle cx="9" cy="20" r="1.2" fill="currentColor" stroke="none" />
+            <circle cx="17" cy="20" r="1.2" fill="currentColor" stroke="none" />
+          </svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Mở menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow reveal">
+            <a class="handle-link" href="https://www.tiktok.com/@lybi1993" target="_blank" rel="noopener noreferrer">@lybi1993</a>
+            · Handmade · Fresh daily
+          </p>
+          <h1 class="reveal delay-1">
+            Ngọt ngào mỗi ngày<br />
+            <em>từ bếp bánh <span class="brand-highlight">Phương Lý</span></em>
+          </h1>
+          <p class="hero-lead reveal delay-2">
+            Bánh kem tươi, bánh sinh nhật thiết kế theo yêu cầu, cookies giòn tan
+            và quà ngọt handmade — đúng những món bạn xem trên TikTok
+            <strong>@lybi1993</strong>.
+          </p>
+          <div class="hero-cta reveal delay-3">
+            <a href="#menu" class="btn btn-primary">Xem menu bánh</a>
+            <a href="https://www.tiktok.com/@lybi1993" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Xem TikTok</a>
+          </div>
+          <div class="hero-stats reveal delay-4">
+            <div><strong>@lybi</strong><span>TikTok chính thức</span></div>
+            <div><strong>4.9★</strong><span>Đánh giá khách</span></div>
+            <div><strong>100%</strong><span>Handmade</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal delay-2">
+          <div class="cake-stage">
+            <div class="cake-glow"></div>
+            <div class="floating-card card-a">
+              <span class="emoji">🎂</span>
+              <div>
+                <strong>Bánh sinh nhật</strong>
+                <small>Custom theo ý bạn</small>
+              </div>
+            </div>
+            <div class="floating-card card-b">
+              <span class="emoji">🧁</span>
+              <div>
+                <strong>Cupcake set</strong>
+                <small>Từ 89.000đ</small>
+              </div>
+            </div>
+            <div class="hero-cake" aria-hidden="true">
+              <div class="plate"></div>
+              <div class="tier tier-bottom"></div>
+              <div class="tier tier-mid"></div>
+              <div class="tier tier-top"></div>
+              <div class="frosting f1"></div>
+              <div class="frosting f2"></div>
+              <div class="frosting f3"></div>
+              <div class="cherry"></div>
+              <div class="spark s1"></div>
+              <div class="spark s2"></div>
+              <div class="spark s3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span>Cuộn khám phá</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Menu page -->
+    <section class="menu-section page-view" id="menu">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Thực đơn ngọt</p>
+          <h2>Menu <em>chính</em></h2>
+          <p class="section-desc">Khám phá thêm những bánh và set quà handmade khác từ Tiệm Bánh Phương Lý.</p>
+        </div>
+        <div class="product-grid" id="productGrid">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Best Seller page -->
+    <section class="menu-section page-view" id="best-seller">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Best Seller</p>
+          <h2>Top <em>best-seller</em></h2>
+          <p class="section-desc">Những món bánh bán chạy nhất và được yêu thích nhất trên TikTok @lybi1993.</p>
+        </div>
+        <div class="product-grid" id="bestSellerGrid">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section page-view" id="test-2">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">test 2</p>
+          <h2>Trang <em>test 2</em></h2>
+          <p class="section-desc">Nội dung riêng cho mục con test 2.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section page-view" id="test-3">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">test 3</p>
+          <h2>Trang <em>test 3</em></h2>
+          <p class="section-desc">Nội dung riêng cho mục con test 3.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section page-view" id="test-4">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">test 4</p>
+          <h2>Trang <em>test 4</em></h2>
+          <p class="section-desc">Nội dung riêng cho mục con test 4.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section page-view" id="test-5">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">test 5</p>
+          <h2>Trang <em>test 5</em></h2>
+          <p class="section-desc">Nội dung riêng cho mục con test 5.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section page-view" id="gallery-strawberry-dream">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Strawberry Dream</p>
+          <h2>Gallery <em>Strawberry Dream</em></h2>
+          <p class="section-desc">Hình ảnh bánh dâu tươi, thiết kế trắng hồng ngọt ngào. Mở rộng cảm hứng cho đơn bánh tặng người thương.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section page-view" id="gallery-chocolate-cloud">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Chocolate Cloud</p>
+          <h2>Gallery <em>Chocolate Cloud</em></h2>
+          <p class="section-desc">Làn khói socola mềm mịn, tone tối sang trọng. Mô phỏng phong cách bánh mousse Bỉ trên feed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section page-view" id="gallery-lemon-soft">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Lemon Soft</p>
+          <h2>Gallery <em>Lemon Soft</em></h2>
+          <p class="section-desc">Thiết kế vàng tươi, vị chanh dịu nhẹ. Thích hợp cho bữa tiệc nhẹ và quà mừng mùa hè.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section page-view" id="gallery-sakura-bloom">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Sakura Bloom</p>
+          <h2>Gallery <em>Sakura Bloom</em></h2>
+          <p class="section-desc">Cảm hứng hoa anh đào, tone hồng pastel lãng mạn. Mẫu bánh custom cho sinh nhật và lễ kỷ niệm.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section page-view" id="gallery-cookie-box">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Cookie Box</p>
+          <h2>Gallery <em>Cookie Box</em></h2>
+          <p class="section-desc">Hộp cookie signature mix vị, packaging đẹp. Phù hợp quà tặng bạn bè và đối tác.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section page-view" id="gallery-gift-set">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Gift Set</p>
+          <h2>Gallery <em>Gift Set</em></h2>
+          <p class="section-desc">Set quà ngọt kèm ribbon, thiệp. Ý tưởng combo tặng sinh nhật và ngày lễ đặc biệt.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="story" id="story">
+      <div class="container story-grid">
+        <div class="story-visual">
+          <div class="story-frame">
+            <div class="story-photo photo-main">
+              <div class="photo-inner">
+                <span class="big-emoji">👩‍🍳</span>
+                <p>Bếp nhỏ đầy yêu thương</p>
+              </div>
+            </div>
+            <div class="story-photo photo-side">
+              <div class="photo-inner">
+                <span class="big-emoji">🌸</span>
+                <p>Decor theo mood</p>
+              </div>
+            </div>
+            <div class="story-badge">
+              <strong>@lybi</strong>
+              <span>1993</span>
+            </div>
+          </div>
+        </div>
+        <div class="story-content">
+          <p class="eyebrow">Câu chuyện thương hiệu</p>
+          <h2>Từ những video TikTok<br /><em>đến từng chiếc bánh trên bàn tiệc</em></h2>
+          <p>
+            Tiệm Bánh <strong class="brand-highlight">Phương Lý</strong> — <strong>@lybi1993</strong> — bắt đầu từ niềm đam mê làm bánh handmade
+            và chia sẻ trên TikTok. Mỗi video là một chiếc bánh; mỗi chiếc bánh là một câu chuyện ngọt ngào
+            gửi đến khách hàng.
+          </p>
+          <ul class="story-list">
+            <li>
+              <span class="icon">✨</span>
+              <div>
+                <strong>Nguyên liệu tươi</strong>
+                <p>Kem tươi, bơ Pháp, hoa quả theo mùa — không dùng kem bơ rẻ.</p>
+              </div>
+            </li>
+            <li>
+              <span class="icon">🎨</span>
+              <div>
+                <strong>Thiết kế theo yêu cầu</strong>
+                <p>Gửi sample từ feed <a href="https://www.tiktok.com/@lybi1993" target="_blank" rel="noopener noreferrer">@lybi1993</a> — bếp làm đúng vibe bạn muốn.</p>
+              </div>
+            </li>
+            <li>
+              <span class="icon">🚚</span>
+              <div>
+                <strong>Giao bánh cẩn thận</strong>
+                <p>Đóng hộp chắc chắn, giao trong ngày khu vực nội thành.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TikTok profile spotlight -->
+    <section class="tiktok-section" id="tiktok">
+      <div class="container">
+        <div class="tiktok-card">
+          <div class="tiktok-card-glow" aria-hidden="true"></div>
+          <div class="tiktok-profile">
+            <div class="tiktok-avatar" aria-hidden="true">
+              <span>PL</span>
+              <div class="tiktok-live-ring"></div>
+            </div>
+            <div class="tiktok-meta">
+              <p class="eyebrow">Kênh chính thức</p>
+              <h2>@lybi1993</h2>
+              <p class="tiktok-name"><span class="brand-highlight">Phương Lý</span> · Bakery</p>
+              <p class="tiktok-bio">
+                Video bánh kem, sinh nhật custom, behind-the-scenes bếp nhỏ —
+                follow để xem mẫu mới mỗi ngày và inbox order trực tiếp trên TikTok.
+              </p>
+              <div class="tiktok-stats-row">
+                <div><strong>Follow</strong><span>Để không bỏ lỡ menu</span></div>
+                <div><strong>Like</strong><span>Bánh best-seller</span></div>
+                <div><strong>Inbox</strong><span>Đặt bánh nhanh</span></div>
+              </div>
+              <div class="tiktok-actions">
+                <a class="btn btn-primary" href="https://www.tiktok.com/@lybi1993" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.88-2.88 2.89 2.89 0 0 1 2.88-2.88c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.3a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.16 8.16 0 0 0 4.76 1.52V6.84a4.84 4.84 0 0 1-1-.15z"/>
+                  </svg>
+                  Mở TikTok @lybi1993
+                </a>
+                <a class="btn btn-ghost" href="#order">Hoặc đặt qua form</a>
+              </div>
+            </div>
+          </div>
+          <div class="tiktok-feed-mock" aria-hidden="true">
+            <div class="tt-phone">
+              <div class="tt-notch"></div>
+              <div class="tt-screen-img">
+                <img src="tiembanhphuongly.jpg" alt="TikTok Profile @lybi1993 - Tiệm Bánh Phương Lý" />
+              </div>
+              <p class="tt-handle">tiktok.com/@lybi1993</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>@lybi1993</span><span>✦</span>
+        <span>Bánh kem tươi</span><span>✦</span>
+        <span>Custom birthday cake</span><span>✦</span>
+        <span>Phương Lý Bakery</span><span>✦</span>
+        <span>Cupcake set</span><span>✦</span>
+        <span>Cookies handmade</span><span>✦</span>
+        <span>@lybi1993</span><span>✦</span>
+        <span>Bánh kem tươi</span><span>✦</span>
+        <span>Custom birthday cake</span><span>✦</span>
+        <span>Phương Lý Bakery</span><span>✦</span>
+        <span>Cupcake set</span><span>✦</span>
+        <span>Cookies handmade</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Khoảnh khắc ngọt</p>
+          <h2>Gallery <em>từ bếp</em></h2>
+        </div>
+        <div class="gallery-grid">
+          <figure id="gallery-strawberry-dream" class="g-item g1"><div class="g-fill"><span>🍓</span><figcaption>Strawberry Dream</figcaption></div></figure>
+          <figure id="gallery-chocolate-cloud" class="g-item g2"><div class="g-fill"><span>🍫</span><figcaption>Chocolate Cloud</figcaption></div></figure>
+          <figure id="gallery-lemon-soft" class="g-item g3"><div class="g-fill"><span>🍋</span><figcaption>Lemon Soft</figcaption></div></figure>
+          <figure id="gallery-sakura-bloom" class="g-item g4"><div class="g-fill"><span>🌸</span><figcaption>Sakura Bloom</figcaption></div></figure>
+          <figure id="gallery-cookie-box" class="g-item g5"><div class="g-fill"><span>🍪</span><figcaption>Cookie Box</figcaption></div></figure>
+          <figure id="gallery-gift-set" class="g-item g6"><div class="g-fill"><span>🎀</span><figcaption>Gift Set</figcaption></div></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="reviews">
+      <div class="container">
+        <div class="section-head light">
+          <p class="eyebrow">Khách nói gì</p>
+          <h2>Yêu từ <em>lần đầu nếm</em></h2>
+        </div>
+        <div class="review-grid">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>“Bánh kem mềm, kem không ngọt gắt. Decor đúng sample mình gửi trên TikTok luôn!”</p>
+            <footer>
+              <div class="avatar">H</div>
+              <div>
+                <strong>Hà My</strong>
+                <small>Bánh sinh nhật 18cm</small>
+              </div>
+            </footer>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>“Đặt set cupcake cho team — mọi người khen xỉu. Hộp đẹp, giao đúng giờ.”</p>
+            <footer>
+              <div class="avatar">T</div>
+              <div>
+                <strong>Tuấn Anh</strong>
+                <small>Cupcake set 12 cái</small>
+              </div>
+            </footer>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>“Cookies giòn, vị matcha siêu thơm. Sẽ order lại làm quà 20/10.”</p>
+            <footer>
+              <div class="avatar">L</div>
+              <div>
+                <strong>Lan Phương</strong>
+                <small>Cookie box</small>
+              </div>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order -->
+    <section class="order" id="order">
+      <div class="container order-grid">
+        <div class="order-info">
+          <p class="eyebrow">Đặt bánh</p>
+          <h2>Gửi yêu cầu<br /><em>chiếc bánh trong mơ</em></h2>
+          <p>Điền form hoặc inbox TikTok <a href="https://www.tiktok.com/@lybi1993" target="_blank" rel="noopener noreferrer"><strong>@lybi1993</strong></a>. Bếp phản hồi trong 15–30 phút (giờ làm việc).</p>
+          <div class="order-meta">
+            <div>
+              <strong>📍 Địa chỉ</strong>
+              <span>440/113 Thống Nhất, P. An Hội Đông, Q. Gò Vấp<br />(Hẻm 440 kế bên Jollibee)</span>
+            </div>
+            <div>
+              <strong>📞 Hotline</strong>
+              <span><a href="tel:0329144988" class="phone-link">0329 144 988</a></span>
+            </div>
+            <div>
+              <strong>TikTok order</strong>
+              <span>@lybi1993 · Inbox trực tiếp</span>
+            </div>
+            <div>
+              <strong>Giờ nhận đơn</strong>
+              <span>8:00 – 20:00 mỗi ngày</span>
+            </div>
+            <div>
+              <strong>Custom cake</strong>
+              <span>Đặt trước 1–2 ngày</span>
+            </div>
+          </div>
+          <a class="btn btn-dark tiktok-cta" href="https://www.tiktok.com/@lybi1993" target="_blank" rel="noopener noreferrer">
+            Inbox TikTok @lybi1993
+          </a>
+        </div>
+
+        <form class="order-form" id="orderForm">
+          <div class="form-row">
+            <label>
+              Họ tên
+              <input type="text" name="name" placeholder="Nguyễn Văn A" required />
+            </label>
+            <label>
+              Số điện thoại
+              <input type="tel" name="phone" placeholder="09xx xxx xxx" required />
+            </label>
+          </div>
+          <label>
+            Loại bánh
+            <select name="type" required>
+              <option value="">Chọn loại bánh…</option>
+              <option>Bánh sinh nhật custom</option>
+              <option>Bánh kem tươi</option>
+              <option>Cupcake set</option>
+              <option>Cookies / set quà</option>
+              <option>Khác</option>
+            </select>
+          </label>
+          <label>
+            Ngày nhận
+            <input type="date" name="date" required />
+          </label>
+          <label>
+            Ghi chú / mô tả bánh
+            <textarea name="note" rows="4" placeholder="Ví dụ: bánh 2 tầng, tone hồng pastel, chữ Happy Birthday Ly, size 18cm…"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary full">Gửi đơn đặt bánh</button>
+          <p class="form-note">* Đây là demo frontend — đơn sẽ hiện popup xác nhận (chưa kết nối backend).</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <span class="logo-mark">PL</span>
+        <span class="logo-text">
+            <strong class="brand-name">Phương Lý</strong>
+            <small>Bakery</small>
+          </span>
+        </a>
+        <p>Bánh handmade · <a href="https://www.tiktok.com/@lybi1993" target="_blank" rel="noopener noreferrer">@lybi1993</a> trên TikTok</p>
+      </div>
+      <div class="footer-contact">
+        <span>📍 440/113 Thống Nhất, Gò Vấp</span>
+        <span>📞 <a href="tel:0329144988">0329 144 988</a></span>
+      </div>
+      <div class="footer-links">
+        <a href="#menu">Menu</a>
+        <a href="#story">Câu chuyện</a>
+        <a href="#tiktok">TikTok</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#order">Đặt bánh</a>
+        <a href="https://www.tiktok.com/@lybi1993" target="_blank" rel="noopener noreferrer">@lybi1993</a>
+      </div>
+      <p class="copyright">© 2026 Tiệm Bánh <strong class="brand-highlight">Phương Lý</strong> · TikTok @lybi1993 · Made with 💕</p>
+    </div>
+  </footer>
+
+  <!-- Cart drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="cart-head">
+      <h3>Giỏ bánh của bạn</h3>
+      <button class="close-cart" id="closeCart" aria-label="Đóng">×</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-total">
+        <span>Tạm tính</span>
+        <strong id="cartTotal">0đ</strong>
+      </div>
+      <a href="#order" class="btn btn-primary full" id="checkoutBtn">Tiếp tục đặt bánh</a>
+    </div>
+  </aside>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status"></div>
+
+  <!-- Product modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose" aria-label="Đóng">×</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
