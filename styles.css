@@ -1746,7 +1746,8 @@ h2 em, h1 em {
     max-height: 0;
     overflow: hidden;
   }
-  .nav-dropdown.open .submenu {
+  .nav-dropdown.open .submenu,
+  .submenu.open {
     display: block;
     opacity: 1;
     visibility: visible;
@@ -1763,20 +1764,6 @@ h2 em, h1 em {
   .nav-item,
   .nav-dropdown {
     width: 100%;
-  }
-  .nav-dropdown:hover .submenu,
-  .nav-dropdown:focus-within .submenu {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-4px);
-    max-height: 0;
-  }
-  .nav-dropdown.open .submenu {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    max-height: 420px;
   }
   .menu-toggle {
     display: flex;
