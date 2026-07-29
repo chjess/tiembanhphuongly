@@ -1688,6 +1688,9 @@ h2 em, h1 em {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .menu-section {
+    padding-top: 3rem;
+  }
   .review-grid {
     grid-template-columns: 1fr;
   }
@@ -1704,12 +1707,16 @@ h2 em, h1 em {
     background: rgba(255, 248, 242, 0.97);
     backdrop-filter: blur(20px);
     flex-direction: column;
-    justify-content: center;
-    gap: 1.75rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
-    z-index: 1;
+    z-index: 250;
+    padding: 5.5rem 1rem 1.5rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .nav.open {
     opacity: 1;
@@ -1719,16 +1726,32 @@ h2 em, h1 em {
   .nav .dropdown-toggle {
     font-size: 1.35rem;
     font-family: var(--font-display);
+    display: block;
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border-radius: 18px;
+    box-sizing: border-box;
   }
   .submenu {
     position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
     box-shadow: none;
     background: transparent;
     padding: 0;
     width: 100%;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .nav-dropdown.open .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    max-height: 420px;
   }
   .submenu a {
     padding: 0.75rem 1rem;
@@ -1737,19 +1760,29 @@ h2 em, h1 em {
   .nav .dropdown-toggle {
     width: 100%;
   }
-  .nav-item {
-    width: 100%;
-  }
+  .nav-item,
   .nav-dropdown {
     width: 100%;
   }
   .nav-dropdown:hover .submenu,
   .nav-dropdown:focus-within .submenu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    max-height: 0;
+  }
+  .nav-dropdown.open .submenu {
+    display: block;
     opacity: 1;
     visibility: visible;
-    transform: none;
+    transform: translateY(0);
+    max-height: 420px;
   }
-  .menu-toggle { display: flex; z-index: 2; }
+  .menu-toggle {
+    display: flex;
+    position: relative;
+    z-index: 300;
+  }
   .tiktok-pill span,
   .tiktok-pill { font-size: 0; padding: 0.55rem; width: 44px; height: 44px; justify-content: center; border-radius: 14px; }
   .tiktok-pill svg { width: 18px; height: 18px; }
