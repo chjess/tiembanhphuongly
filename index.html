@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Tiệm Bánh Phương Lý (@lybi1993) | Bánh kem handmade</title>
   <meta name="description" content="Tiệm Bánh Phương Lý — @lybi1993 trên TikTok. Bánh kem handmade, bánh sinh nhật custom, cookies & quà ngọt. Đặt online, giao tận nơi." />
   <meta property="og:title" content="Tiệm Bánh Phương Lý | @lybi1993" />
@@ -106,7 +106,7 @@
             <a href="https://www.tiktok.com/@lybi1993" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Xem TikTok</a>
           </div>
           <div class="hero-stats reveal delay-4">
-            <div><strong>@lybi</strong><span>TikTok chính thức</span></div>
+            <div><strong>@lybi1993</strong><span>TikTok chính thức</span></div>
             <div><strong>4.9★</strong><span>Đánh giá khách</span></div>
             <div><strong>100%</strong><span>Handmade</span></div>
           </div>
@@ -115,21 +115,25 @@
         <div class="hero-visual reveal delay-2">
           <div class="cake-stage">
             <div class="cake-glow"></div>
-            <div class="floating-card card-a">
-              <span class="emoji">🎂</span>
-              <div>
-                <strong>Bánh sinh nhật</strong>
-                <small>Custom theo ý bạn</small>
-              </div>
+            <!-- Anime-cute effects around the hero cake photo -->
+            <div class="hero-anime" aria-hidden="true">
+              <span class="petal p1"></span>
+              <span class="petal p2"></span>
+              <span class="petal p3"></span>
+              <span class="petal p4"></span>
+              <span class="petal p5"></span>
+              <span class="sparkle spk1">✦</span>
+              <span class="sparkle spk2">✧</span>
+              <span class="sparkle spk3">✦</span>
+              <span class="sparkle spk4">✧</span>
+              <span class="heart h1">💗</span>
+              <span class="heart h2">💖</span>
+              <span class="heart h3">💕</span>
             </div>
-            <div class="floating-card card-b">
-              <span class="emoji">🧁</span>
-              <div>
-                <strong>Cupcake set</strong>
-                <small>Từ 89.000đ</small>
-              </div>
-            </div>
+            <span class="hero-sticker" aria-hidden="true">100% Handmade 🧁</span>
             <div class="hero-cake" aria-hidden="true">
+              <img class="hero-cake-img" src="fly01.png" alt="Bánh kem Tiệm Bánh Phương Lý" />
+              <div class="hero-shine" aria-hidden="true"></div>
               <div class="plate"></div>
               <div class="tier tier-bottom"></div>
               <div class="tier tier-mid"></div>
@@ -142,6 +146,7 @@
               <div class="spark s2"></div>
               <div class="spark s3"></div>
             </div>
+            <!-- No carousel here — moved to Story section per user request -->
           </div>
         </div>
       </div>
@@ -283,24 +288,42 @@
     <section class="story" id="story">
       <div class="container story-grid">
         <div class="story-visual">
-          <div class="story-frame">
-            <div class="story-photo photo-main">
-              <div class="photo-inner">
-                <span class="big-emoji">👩‍🍳</span>
-                <p>Bếp nhỏ đầy yêu thương</p>
-              </div>
+          <!-- Album cover: "Bếp nhỏ đầy yêu thương" -->
+          <div class="album" id="bakeryAlbum" role="button" tabindex="0" aria-label="Mở album 28 ảnh Bếp nhỏ đầy yêu thương">
+            <div class="album-stack" aria-hidden="true">
+              <figure class="album-photo ap-1">
+                <img src="image bakery/1a41e2329db91ce745a827.jpg" alt="" loading="lazy" />
+              </figure>
+              <figure class="album-photo ap-2">
+                <img src="image bakery/4f822ee35168d03689793.jpg" alt="" loading="lazy" />
+              </figure>
+              <figure class="album-photo ap-3">
+                <img src="image bakery/73c087a1f82a7974203b2.jpg" alt="" loading="lazy" />
+              </figure>
+              <figure class="album-photo ap-4">
+                <img src="image bakery/0e6f6c00138b92d5cb9a14.jpg" alt="" loading="lazy" />
+              </figure>
             </div>
-            <div class="story-photo photo-side">
-              <div class="photo-inner">
-                <span class="big-emoji">🌸</span>
-                <p>Decor theo mood</p>
-              </div>
+            <div class="album-cover">
+              <span class="album-count">📸 28 hình ảnh</span>
+              <h3 class="album-title">Bếp nhỏ <em>đầy yêu thương</em></h3>
+              <p class="album-sub">Mỗi chiếc bánh là một câu chuyện — bấm để kéo xem từng khoảnh khắc</p>
+              <span class="album-btn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="3" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <path d="M21 15l-5-5L5 21" />
+                </svg>
+                Xem album
+              </span>
             </div>
-            <div class="story-badge">
-              <strong>@lybi</strong>
-              <span>1993</span>
-            </div>
+            <div class="album-shine" aria-hidden="true"></div>
           </div>
+          <div class="story-badge">
+            <strong>@lybi</strong>
+            <span>1993</span>
+          </div>
+          <p class="wall-caption">👩‍🍳 <strong>Bếp nhỏ đầy yêu thương</strong> — 28 khoảnh khắc · mỗi chiếc bánh là một câu chuyện</p>
         </div>
         <div class="story-content">
           <p class="eyebrow">Câu chuyện thương hiệu</p>
@@ -409,13 +432,39 @@
           <p class="eyebrow">Khoảnh khắc ngọt</p>
           <h2>Gallery <em>từ bếp</em></h2>
         </div>
-        <div class="gallery-grid">
-          <figure class="g-item g1"><div class="g-fill"><span>🍓</span><figcaption>Strawberry Dream</figcaption></div></figure>
-          <figure class="g-item g2"><div class="g-fill"><span>🍫</span><figcaption>Chocolate Cloud</figcaption></div></figure>
-          <figure class="g-item g3"><div class="g-fill"><span>🍋</span><figcaption>Lemon Soft</figcaption></div></figure>
-          <figure class="g-item g4"><div class="g-fill"><span>🌸</span><figcaption>Sakura Bloom</figcaption></div></figure>
-          <figure class="g-item g5"><div class="g-fill"><span>🍪</span><figcaption>Cookie Box</figcaption></div></figure>
-          <figure class="g-item g6"><div class="g-fill"><span>🎀</span><figcaption>Gift Set</figcaption></div></figure>
+        <div class="gallery-grid" id="galleryGrid">
+          <figure class="g-item g1" data-gallery-key="gallery_item_1">
+            <img class="g-image" src="image bakery/0e6f6c00138b92d5cb9a14.jpg" alt="Strawberry Dream" loading="lazy" />
+            <div class="g-fill"><figcaption>Strawberry Dream</figcaption></div>
+          </figure>
+          <figure class="g-item g2" data-gallery-key="gallery_item_2">
+            <img class="g-image" src="image bakery/04b3dadba550240e7d4112.jpg" alt="Chocolate Cloud" loading="lazy" />
+            <div class="g-fill"><figcaption>Chocolate Cloud</figcaption></div>
+          </figure>
+          <figure class="g-item g3" data-gallery-key="gallery_item_3">
+            <img class="g-image" src="image bakery/0eb241c13e4abf14e65b28.jpg" alt="Lemon Soft" loading="lazy" />
+            <div class="g-fill"><figcaption>Lemon Soft</figcaption></div>
+          </figure>
+          <figure class="g-item g4" data-gallery-key="gallery_item_4">
+            <img class="g-image" src="image bakery/1a41e2329db91ce745a827.jpg" alt="Sakura Bloom" loading="lazy" />
+            <div class="g-fill"><figcaption>Sakura Bloom</figcaption></div>
+          </figure>
+          <figure class="g-item g5" data-gallery-key="gallery_item_5">
+            <img class="g-image" src="image bakery/4f822ee35168d03689793.jpg" alt="Cookie Box" loading="lazy" />
+            <div class="g-fill"><figcaption>Cookie Box</figcaption></div>
+          </figure>
+          <figure class="g-item g6" data-gallery-key="gallery_item_6">
+            <img class="g-image" src="image bakery/6c8c4efb3170b02ee96124.jpg" alt="Gift Set" loading="lazy" />
+            <div class="g-fill"><figcaption>Gift Set</figcaption></div>
+          </figure>
+        </div>
+        <div class="gallery-scroll-hint" id="galleryScrollHint" aria-hidden="true">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
       </div>
     </section>
@@ -465,6 +514,20 @@
       </div>
     </section>
 
+    <!-- Orders page (Đơn hàng) -->
+    <section class="menu-section page-view" id="orders">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Đơn hàng</p>
+          <h2>Lịch sử <em>đơn đặt</em></h2>
+          <p class="section-desc">Xem lại các đơn bánh đã đặt tại Tiệm Bánh Phương Lý.</p>
+        </div>
+        <div class="orders-list" id="ordersList">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </section>
+
     <!-- Order -->
     <section class="order" id="order">
       <div class="container order-grid">
@@ -486,7 +549,7 @@
               <span>@lybi1993 · Inbox trực tiếp</span>
             </div>
             <div>
-              <strong>Giờ nhận đơn</strong>
+              <strong>Giờ làm việc</strong>
               <span>8:00 – 20:00 mỗi ngày</span>
             </div>
             <div>
@@ -532,6 +595,37 @@
           <button type="submit" class="btn btn-primary full">Gửi đơn đặt bánh</button>
           <p class="form-note">* Đây là demo frontend — đơn sẽ hiện popup xác nhận (chưa kết nối backend).</p>
         </form>
+
+        <!-- Bản đồ cửa hàng (hiển thị thay cho form đặt bánh khi form bị ẩn) -->
+        <div class="store-map" id="storeMap" aria-hidden="true">
+          <div class="store-map-card">
+            <div class="store-map-head">
+              <span class="store-map-icon">📍</span>
+              <div>
+                <h3>Tiệm Bánh <em>Phương Lý</em></h3>
+                <p>440/113 Thống Nhất, P. An Hội Đông, Q. Gò Vấp<br />(Hẻm 440 kế bên Jollibee)</p>
+              </div>
+            </div>
+            <div class="store-map-frame">
+              <iframe
+                src="https://www.google.com/maps?q=Ti%E1%BB%87m+B%C3%A1nh+Ph%C6%B0%C6%A1ng+L%C3%BD+440%2F113+Th%E1%BB%91ng+Nh%E1%BA%A5t+An+H%E1%BB%99i+%C4%90%C3%B4ng+G%C3%B2+V%E1%BA%A5p+H%E1%BB%93+Ch%C3%AD+Minh&hl=vi&z=17&output=embed"
+                width="100%"
+                height="340"
+                style="border:0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Bản đồ Tiệm Bánh Phương Lý"
+              ></iframe>
+            </div>
+            <div class="store-map-actions">
+              <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=Ti%E1%BB%87m+B%C3%A1nh+Ph%C6%B0%C6%A1ng+L%C3%BD+440%2F113+Th%E1%BB%91ng+Nh%E1%BA%A5t+An+H%E1%BB%99i+%C4%90%C3%B4ng+G%C3%B2+V%E1%BA%A5p+H%E1%BB%93+Ch%C3%AD+Minh" target="_blank" rel="noopener noreferrer">
+                🧭 Chỉ đường
+              </a>
+              <a class="btn btn-ghost" href="tel:0329144988">📞 0329 144 988</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -565,9 +659,10 @@
     </div>
   </footer>
 
-  <!-- Cart drawer -->
+<!-- Cart drawer -->
   <div class="cart-overlay" id="cartOverlay"></div>
   <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+    <div class="drag-handle" id="cartDragHandle" aria-hidden="true"></div>
     <div class="cart-head">
       <h3>Giỏ bánh của bạn</h3>
       <button class="close-cart" id="closeCart" aria-label="Đóng">×</button>
@@ -592,6 +687,71 @@
       <div class="modal-body" id="modalBody"></div>
     </div>
   </div>
+
+  <!-- Album lightbox gallery (28 ảnh "Bếp nhỏ đầy yêu thương") -->
+  <div class="album-lightbox" id="albumLightbox" role="dialog" aria-modal="true" aria-label="Album Bếp nhỏ đầy yêu thương">
+    <div class="album-lb-head">
+      <div class="album-lb-title">
+        <span class="album-lb-name">👩‍🍳 Bếp nhỏ đầy yêu thương</span>
+        <span class="album-lb-counter" id="albumLbCounter">1 / 28</span>
+      </div>
+      <button class="album-lb-close" id="albumLbClose" aria-label="Đóng album">×</button>
+    </div>
+
+    <div class="album-lb-stage" id="albumLbStage">
+      <button class="album-lb-nav album-lb-prev" id="albumLbPrev" aria-label="Ảnh trước">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+
+      <div class="album-lb-track" id="albumLbTrack">
+        <!-- slides filled by JS -->
+      </div>
+
+      <button class="album-lb-nav album-lb-next" id="albumLbNext" aria-label="Ảnh sau">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+          <path d="M9 6l6 6-6 6" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="album-lb-thumbs" id="albumLbThumbs">
+      <!-- thumbnails filled by JS -->
+    </div>
+  </div>
+
+  <!-- Bottom Navigation Bar (mobile only) -->
+  <nav class="bottom-nav" id="bottomNav" aria-label="Di chuyển nhanh">
+    <button class="bottom-nav-item active" data-tab="home" aria-label="Trang chủ">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V10" />
+      </svg>
+      <span>Trang chủ</span>
+    </button>
+    <button class="bottom-nav-item" data-tab="order" aria-label="Đặt bánh">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" />
+        <path d="M9 5a2 2 0 012-2h2a2 2 0 012 2v0a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        <path d="M9 14l2 2 4-4" />
+      </svg>
+      <span>Đặt bánh</span>
+    </button>
+    <button class="bottom-nav-item" data-tab="tiktok" aria-label="TikTok">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.88-2.88 2.89 2.89 0 0 1 2.88-2.88c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.3a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.16 8.16 0 0 0 4.76 1.52V6.84a4.84 4.84 0 0 1-1-.15z" />
+      </svg>
+      <span>TikTok</span>
+    </button>
+    <button class="bottom-nav-item" data-tab="orders" aria-label="Đơn hàng">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8">
+        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" />
+        <path d="M9 5a2 2 0 012-2h2a2 2 0 012 2v0a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        <path d="M9 14l2 2 4-4" />
+      </svg>
+      <span>Đơn hàng</span>
+    </button>
+  </nav>
 
   <script src="script.js"></script>
 </body>
