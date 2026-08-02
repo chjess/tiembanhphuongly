@@ -106,6 +106,23 @@ ul { list-style: none; }
   gap: 0.75rem;
   z-index: 2;
 }
+.logo-img {
+  width: auto;
+  height: 48px;
+  max-width: 140px;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+  /* Remove white background from JPG logo — clip to circle */
+  clip-path: circle(44% at 50% 50%);
+  -webkit-clip-path: circle(44% at 50% 50%);
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0;
+  margin: 0;
+}
 .logo-mark {
   width: 44px; height: 44px;
   border-radius: 14px;
@@ -1611,6 +1628,16 @@ h2 em, h1 em {
   font-size: 1.75rem;
   font-weight: 700;
   box-shadow: 0 12px 30px rgba(254, 44, 85, 0.3);
+  overflow: hidden;
+}
+.tiktok-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50%;
+  clip-path: circle(44% at 50% 50%);
+  -webkit-clip-path: circle(44% at 50% 50%);
 }
 .tiktok-live-ring {
   position: absolute;
@@ -2460,7 +2487,7 @@ h2 em, h1 em {
     opacity: 1;
     visibility: visible;
   }
-  .nav a,
+.nav a,
   .nav .dropdown-toggle {
     font-size: 1.35rem;
     font-family: var(--font-display);
@@ -2469,6 +2496,8 @@ h2 em, h1 em {
     padding: 0.9rem 1rem;
     border-radius: 18px;
     box-sizing: border-box;
+    color: var(--ink);
+    font-weight: 600;
   }
   .submenu {
     position: static;
@@ -2506,6 +2535,8 @@ h2 em, h1 em {
     padding: 0.8rem 1rem;
     margin: 0.2rem 0;
     border-radius: 14px;
+    color: var(--ink);
+    font-weight: 600;
   }
   .nav .dropdown-toggle {
     width: 100%;
@@ -3120,10 +3151,26 @@ body.bottom-sheet-open {
   .carousel-prev { left: 8px; }
   .carousel-next { right: 8px; }
 
-  /* Keep CSS cake visible on mobile (carousel removed — images moved to Story) */
+  /* Hero photo (fly01.png) synced to mobile — same look as desktop */
   .hero-cake {
     display: block;
     transform-origin: center;
+  }
+  .hero-cake-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 18px 44px rgba(59, 42, 36, 0.25);
+  }
+  /* Hide the old CSS-drawn cake parts on mobile too */
+  .hero-cake .plate,
+  .hero-cake .tier,
+  .hero-cake .frosting,
+  .hero-cake .cherry,
+  .hero-cake .spark {
+    display: none;
   }
 
   .cake-stage {
@@ -3156,33 +3203,96 @@ body.bottom-sheet-open {
     pointer-events: none;
     z-index: 3;
   }
-  .petal, .heart { display: none; }
-  .sparkle { font-size: 15px; }
-  .spk1 { font-size: 20px; top: -8px; left: -6px; }
-  .spk2 { font-size: 14px; }
-  .spk3 { font-size: 13px; }
-  .spk4 { font-size: 18px; }
+  /* Full anime effects on mobile — complete positioning + animations */
+  .petal {
+    position: absolute;
+    top: -18px;
+    width: 12px;
+    height: 11px;
+    background: linear-gradient(135deg, #ffd9e2, #ffb3c6);
+    border-radius: 80% 0 80% 0;
+    opacity: 0;
+    animation: petalFall 9s linear infinite;
+  }
+  .petal::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #ffc2d1, #ff8fab);
+    border-radius: 80% 0 80% 0;
+    transform: rotate(90deg);
+  }
+  .p1 { left: 4%; animation-delay: 0s; }
+  .p2 { left: 22%; animation-delay: 2.4s; }
+  .p3 { left: 46%; animation-delay: 4.2s; }
+  .p4 { left: 68%; animation-delay: 1.6s; }
+  .p5 { left: 88%; animation-delay: 6s; }
+  @keyframes petalFall {
+    0%   { transform: translateY(-18px) rotate(0deg); opacity: 0; }
+    8%   { opacity: 0.9; }
+    100% { transform: translateY(230px) rotate(320deg); opacity: 0.4; }
+  }
+  .sparkle {
+    position: absolute;
+    color: #ffd9a0;
+    font-size: 15px;
+    line-height: 1;
+    opacity: 0;
+    animation: sparkleTwinkle 3s ease-in-out infinite;
+    text-shadow: 0 0 10px rgba(255, 210, 160, 0.85);
+  }
+  .spk1 { font-size: 20px; top: -8px; left: -6px; animation-delay: 0s; }
+  .spk2 { font-size: 14px; top: 20%; right: -8px; animation-delay: 0.8s; }
+  .spk3 { font-size: 13px; bottom: 24%; left: -10px; animation-delay: 1.6s; }
+  .spk4 { font-size: 18px; bottom: -6px; right: 14%; animation-delay: 2.3s; }
+  @keyframes sparkleTwinkle {
+    0%, 100% { opacity: 0; transform: scale(0.55) rotate(0deg); }
+    50%      { opacity: 1; transform: scale(1.2) rotate(22deg); }
+  }
+  .heart {
+    position: absolute;
+    font-size: 14px;
+    opacity: 0;
+    animation: heartFloat 5.5s ease-in-out infinite;
+    filter: drop-shadow(0 2px 5px rgba(255, 110, 145, 0.4));
+  }
+  .h1 { bottom: -10px; left: 10%; font-size: 13px; animation-delay: 0s; }
+  .h2 { bottom: -12px; right: 16%; font-size: 17px; animation-delay: 1.8s; }
+  .h3 { bottom: -8px; left: 52%; font-size: 12px; animation-delay: 3.3s; }
+  @keyframes heartFloat {
+    0%   { transform: translateY(0) scale(0.6); opacity: 0; }
+    12%  { opacity: 0.9; }
+    65%  { opacity: 0.8; }
+    100% { transform: translateY(-110px) scale(1.1); opacity: 0; }
+  }
   .hero-sticker {
     display: inline-flex;
     position: absolute;
     top: -14px;
     right: -10px;
     z-index: 4;
+    align-items: center;
+    gap: 0.3rem;
     padding: 0.45rem 0.85rem;
     font-size: 0.72rem;
     border: 2px dashed var(--blush-deep);
     background: #fff;
     color: var(--rose-dark);
     font-weight: 700;
+    white-space: nowrap;
     border-radius: 999px;
     box-shadow: 0 8px 20px rgba(196, 92, 116, 0.3);
     animation: stickerBob 3.2s ease-in-out infinite;
+  }
+  @keyframes stickerBob {
+    0%, 100% { transform: rotate(-4deg) translateY(0); }
+    50%      { transform: rotate(4deg) translateY(-7px); }
   }
   .hero-shine {
     display: block;
     position: absolute;
     inset: 0;
-    border-radius: 14px;
+    border-radius: 22px;
     overflow: hidden;
     pointer-events: none;
     z-index: 5;
@@ -3198,6 +3308,12 @@ body.bottom-sheet-open {
     transform: skewX(-20deg);
     animation: shineSweep 4.5s ease-in-out infinite;
   }
+  @keyframes shineSweep {
+    0%, 55% { transform: skewX(-20deg) translateX(0); opacity: 0; }
+    62%     { opacity: 1; }
+    85%     { transform: skewX(-20deg) translateX(340%); opacity: 0; }
+    100%    { transform: skewX(-20deg) translateX(340%); opacity: 0; }
+  }
 }
 
 /* ============================================
@@ -3205,10 +3321,11 @@ body.bottom-sheet-open {
    Compact everything for a native-feeling app
    ============================================ */
 @media (max-width: 768px) {
-  /* Smaller header + logo */
+/* Smaller header + logo */
   :root { --header-h: 60px; }
   .header { height: var(--header-h); }
   .logo { gap: 0.5rem; }
+  .logo-img { height: 38px; max-width: 110px; }
   .logo-mark { width: 34px; height: 34px; border-radius: 10px; font-size: 0.95rem; box-shadow: 0 4px 12px rgba(196, 92, 116, 0.3); }
   .logo-text strong,
   .brand-name { font-size: 1.05rem !important; }
@@ -3229,9 +3346,9 @@ body.bottom-sheet-open {
   .hero-stats strong { font-size: 1.1rem; }
   .hero-stats span { font-size: 0.62rem; }
 
-  /* Compact cake illustration */
-  .cake-stage { height: 220px; }
-  .hero-cake { width: 120px; height: 150px; }
+  /* Compact cake illustration — hero photo (fly01.png) */
+  .cake-stage { height: 250px; width: 170px; }
+  .hero-cake { width: 155px; height: 210px; }
   .plate { width: 110px; height: 12px; bottom: 8px; }
   .tier-bottom { width: 84px; height: 34px; bottom: 16px; }
   .tier-mid { width: 66px; height: 28px; bottom: 46px; }
@@ -3345,13 +3462,10 @@ body.bottom-sheet-open {
   .footer-links a { font-size: 0.8rem; }
   .copyright { font-size: 0.72rem; }
 
-  /* Mobile footer: shrink logo, brand name & contact info to mobile standard.
-     Desktop (>=769px) is NOT affected. */
+/* Mobile footer: shrink logo image and contact info */
   .footer-inner { gap: 1rem; }
   .footer .logo { gap: 0.5rem; }
-  .footer .logo-text strong,
-  .footer .brand-name { font-size: 0.95rem !important; }
-  .footer .logo-text small { font-size: 0.55rem; letter-spacing: 0.1em; }
+  .footer .logo-img { height: 34px; max-width: 100px; }
   .footer-brand p { margin-top: 0.4rem; font-size: 0.78rem; line-height: 1.5; }
   .footer-contact { gap: 0.4rem 1rem; font-size: 0.76rem; }
   .footer-links { gap: 0.9rem; }
