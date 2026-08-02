@@ -604,8 +604,18 @@ async function checkOrderFormVisibility() {
         }
       }
     }
-  } catch (err) {
-    console.warn('Không thể kiểm tra cài đặt form, hiển thị mặc định.', err);
+} catch (err) {
+    console.warn('Không thể kiểm tra cài đặt form — hiển thị bản đồ mặc định, ẩn form.', err);
+    // Fallback: khi không có backend, ẩn form và hiện bản đồ
+    const orderFormEl = document.getElementById('orderForm');
+    if (orderFormEl) {
+      orderFormEl.style.display = 'none';
+    }
+    const storeMapEl = document.getElementById('storeMap');
+    if (storeMapEl) {
+      storeMapEl.style.display = 'block';
+      storeMapEl.setAttribute('aria-hidden', 'false');
+    }
   }
 }
 
