@@ -1232,6 +1232,31 @@ document.addEventListener("keydown", (e) => {
 /* Build on load */
 buildAlbumGallery();
 
+/* ============================================
+   APP WELCOME SPLASH — fly01.png welcome screen
+   Chỉ hiện khi mở app mobile (Capacitor/WebView) 
+   hoặc trên màn hình mobile. Tự ẩn sau 2.6s.
+   ============================================ */
+(function initAppWelcome() {
+  const welcomeEl = document.getElementById("appWelcome");
+  if (!welcomeEl) return;
+
+  const isCapacitor = typeof window.Capacitor !== "undefined" && !!window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform();
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  // Chỉ hiện welcome khi đang trong app mobile hoặc trên màn hình nhỏ
+  if (!isCapacitor && !isMobile) return;
+
+  document.body.style.overflow = "hidden";
+  welcomeEl.classList.add("show");
+
+  setTimeout(() => {
+    welcomeEl.classList.add("hide");
+    document.body.style.overflow = "";
+    setTimeout(() => welcomeEl.classList.remove("show"), 600);
+  }, 2600);
+})();
+
 /* Init */
 loadGallerySettings();
 loadProducts();
