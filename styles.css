@@ -3606,6 +3606,15 @@ body.bottom-sheet-open {
 
 
 /* ============================================
+   DESKTOP: Ẩn Bottom Navigation Bar (chỉ mobile mới có)
+   ============================================ */
+@media (min-width: 769px) {
+  .bottom-nav {
+    display: none !important;
+  }
+}
+
+/* ============================================
    STORE MAP — Bản đồ cửa hàng
    Hiển thị thay cho form đặt bánh khi form bị ẩn
    ============================================ */
@@ -3698,4 +3707,85 @@ body.bottom-sheet-open {
     padding: 0.7rem 1rem;
     font-size: 0.85rem;
   }
+}
+
+/* ============================================
+   APP WELCOME SPLASH — fly01.png welcome screen
+   Hiển thị khi mở app mobile (WebView / Capacitor)
+   ============================================ */
+.app-welcome {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(160deg, #fff8f2 0%, #fde8ee 55%, #f0d9b8 100%);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.55s var(--ease), visibility 0.55s var(--ease);
+}
+.app-welcome.show {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+.app-welcome.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.app-welcome-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  text-align: center;
+  padding: 2rem;
+  max-width: 92vw;
+  animation: welcomePop 0.7s var(--ease) both;
+}
+.app-welcome-logo {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  border-radius: 50%;
+  clip-path: circle(44% at 50% 50%);
+  -webkit-clip-path: circle(44% at 50% 50%);
+  animation: welcomeBob 3.2s ease-in-out infinite;
+}
+.app-welcome-img {
+  width: min(230px, 62vw);
+  height: auto;
+  border-radius: 24px;
+  box-shadow: 0 22px 55px rgba(59, 42, 36, 0.28);
+  animation: welcomeImgFloat 4s ease-in-out infinite;
+}
+.app-welcome-name {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--rose-dark);
+  line-height: 1.15;
+  margin-top: 0.4rem;
+}
+.app-welcome-name strong {
+  font-style: italic;
+  color: var(--rose);
+}
+.app-welcome-sub {
+  font-size: 0.85rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+@keyframes welcomePop {
+  from { opacity: 0; transform: scale(0.92) translateY(14px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes welcomeBob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-6px) rotate(2deg); }
+}
+@keyframes welcomeImgFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
